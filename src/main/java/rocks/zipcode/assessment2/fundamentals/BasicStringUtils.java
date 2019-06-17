@@ -7,7 +7,11 @@ public class BasicStringUtils {
      * @return concatenation of `string1` and `string2`
      */
     public static String concatentate(String string1, String string2) {
-        return null;
+        StringBuilder newStr = new StringBuilder();
+        newStr.append(string1);
+        newStr.append(string2);
+
+        return newStr.toString();
     }
 
     /**
@@ -15,7 +19,10 @@ public class BasicStringUtils {
      * @return an identical string with characters in reverse order
      */
     public static String reverse(String string1) {
-        return null;
+        StringBuilder newStr = new StringBuilder();
+        newStr.append(string1);
+
+        return newStr.reverse().toString();
     }
 
     /**
@@ -24,7 +31,11 @@ public class BasicStringUtils {
      * @return concatenation of the reverse of `string1` and reverse of `string2`
      */
     public static String reverseThenConcatenate(String string1, String string2) {
-        return null;
+        StringBuilder newStrReverse = new StringBuilder();
+        newStrReverse.append(reverse(string1));
+        newStrReverse.append(reverse(string2));
+
+        return newStrReverse.toString();
     }
 
     /**
@@ -33,15 +44,17 @@ public class BasicStringUtils {
      * @return `string` with `charactersToRemove` removed
      */
     public static String removeCharacters(String string, String charactersToRemove) {
-        return null;
+        string.replaceAll(charactersToRemove,"");
+        return string.replaceAll(charactersToRemove,"");
     }
-
     /**
      * @param string - the string to be manipulated
      * @param charactersToRemove - characters to be removed from the string
      * @return reverse of `string` with `charactersToRemove` removed
      */
     public static String removeCharactersThenReverse(String string, String charactersToRemove) {
-        return null;
+        StringBuilder newStr = new StringBuilder();
+        newStr.append(removeCharacters(string, charactersToRemove));
+        return newStr.reverse().toString();
     }
 }
